@@ -1,6 +1,6 @@
 # Django Portfolio - Ecommerce website
 
-Demo link: https://liang-demo-1.herokuapp.com/
+Demo link: https://liang-demo-1.herokuapp.com/  
 username: liang  
 password: liang 
 
