@@ -1,8 +1,8 @@
 # Django Portfolio - Ecommerce website
 
 Demo link: https://liang-demo-1.herokuapp.com/  
-username: liang60711  
-password: chunchia   
+username: test123  
+password: test456789   
 
 
 ## 1.Website Function
