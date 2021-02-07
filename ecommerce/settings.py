@@ -95,7 +95,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-import django_database_url
+import dj_database_url
 db_from_env = django_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 
@@ -120,9 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # django-allauth
 AUTHENTICATION_BACKENDS = [
-    # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
-    # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
