@@ -38,8 +38,8 @@ for i in range(12):
     Item.objects.create(
         title='Item '+str(i),
         price=random.randint(1,9)*100,
-        category=random.choices(CATEGORY_CHOICES)[0][1],
-        label=random.choices(LABEL_CHOICES)[0][1],
+        category=random.choices(CATEGORY_CHOICES)[0][0],
+        label=random.choices(LABEL_CHOICES)[0][0],
         description='Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         slug=str(i),
         image=f,
