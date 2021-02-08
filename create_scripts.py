@@ -40,7 +40,7 @@ for i in range(12):
         price=random.randint(1,9)*100,
         category=random.choices(CATEGORY_CHOICES)[0][1],
         label=random.choices(LABEL_CHOICES)[0][1],
-        description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium ante erat, vitae sodales mi varius quis. Etiam vestibulum lorem vel urna tempor, eu fermentum odio aliquam. Aliquam consequat urna vitae ipsum pulvinar, in blandit purus eleifend.',
+        description='Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         slug=str(i),
         image=f,
     )

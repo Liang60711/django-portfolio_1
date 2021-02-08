@@ -38,7 +38,7 @@ class UserProfile(models.Model):
 
 # all items that can purchase
 class Item(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=25)
     price = models.PositiveIntegerField()
     discount_price = models.PositiveIntegerField(blank=True, null=True)
     category = models.CharField(choices=CATEGORY_CHOICES, max_length=2)
