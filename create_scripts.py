@@ -34,13 +34,14 @@ ADDRESS_CHOICES = (
 Item.objects.all().delete()
 
 f = File(open(os.path.join(settings.BASE_DIR, 'media', '5.jpg'), 'rb'))
+f_heroku = File(open(settings.MEDIA_ROOT, '5.jpg'), 'rb')))
 for i in range(12):
     Item.objects.create(
         title='Item '+str(i),
         price=random.randint(1,9)*100,
         category=random.choices(CATEGORY_CHOICES)[0][0],
         label=random.choices(LABEL_CHOICES)[0][0],
-        description='Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium ante erat, vitae sodales mi varius quis. Etiam vestibulum lorem vel urna tempor, eu fermentum odio aliquam. Aliquam consequat urna vitae ipsum pulvinar, in blandit purus eleifend.',
         slug=str(i),
-        image=f,
+        image=f_heroku,
     )
