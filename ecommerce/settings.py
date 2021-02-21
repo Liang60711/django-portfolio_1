@@ -27,8 +27,7 @@ DEBUG = True
 
 # Deploy on HEROKU
 ALLOWED_HOSTS = [
-    'liang-demo1.herokuapp.com',
-    '127.0.0.1',
+    '*',
 ]
 
 
