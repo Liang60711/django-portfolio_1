@@ -33,10 +33,9 @@ ADDRESS_CHOICES = (
 
 Item.objects.all().delete()
 
-# f = File(open(os.path.join(settings.BASE_DIR, 'media', '5.jpg'), 'rb'))
+f = File(open(os.path.join(settings.BASE_DIR, 'media', '5.jpg'), 'rb'))
 
-f_heroku = File(open(os.path.join(settings.BASE_DIR, 'media', '5.jpg'), 'rb'))
-print(f_heroku)
+
 
 for i in range(12):
     Item.objects.create(

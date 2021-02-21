@@ -87,15 +87,32 @@ TEMPLATES = [
 WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+# Database 本地端
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'DEMO TEST',
+#         'USER': 'postgres',
+#         'PASSWORD': 'Chunchia625',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
+# AWS RDS
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'demo_1',
+        'USER': 'liang60711',
+        'PASSWORD': 'Chunchia625',
+        'HOST': 'database-1.cbnbxw5so1th.us-east-2.rds.amazonaws.com',
+        'PORT': '5432',
     }
 }
+
+
+
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
