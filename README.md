@@ -1,7 +1,7 @@
 # Django Portfolio - Ecommerce website
 
-Demo link: https://liang-demo-1.herokuapp.com/  
-TODO: Change database from heroku to s3 postgreSQL, because of heroku dynos sleeping.  
+Demo link: https://liang-demo1.herokuapp.com/  
+
 
 username: test123  
 password: test456789   
@@ -49,9 +49,9 @@ password: test456789
 * jQuery
 
 
-## 4. Deployment
+## 4. Deployment/SQL
 * Heroku
-
+* AWS RDS
 
 
 
