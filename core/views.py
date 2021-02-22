@@ -238,7 +238,7 @@ class PaymentView(View):
             return redirect('core:checkout')
 
     def post(self, *args, **kwargs):
-        order = Order.objects.get(user=self.request.user, ordered=False)
+        order = Order.objects.get_or_create(user=self.request.user, ordered=False)[0]
         form = PaymentForm(self.request.POST)
         userprofile = UserProfile.objects.get(user=self.request.user)
 

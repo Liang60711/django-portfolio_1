@@ -99,25 +99,26 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 # }
 
 # AWS RDS
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'demo_1',
+        'USER': 'liang60711',
+        'PASSWORD': 'Chunchia625',
+        'HOST': 'database-1.cbnbxw5so1th.us-east-2.rds.amazonaws.com',
+        'PORT': '5432',
+    }
+}
+
+
+
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'demo_1',
-#         'USER': 'liang60711',
-#         'PASSWORD': 'Chunchia625',
-#         'HOST': 'database-1.cbnbxw5so1th.us-east-2.rds.amazonaws.com',
-#         'PORT': '5432',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
 
-
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 # use heroku postgres
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=600)

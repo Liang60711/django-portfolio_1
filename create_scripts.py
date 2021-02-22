@@ -33,9 +33,8 @@ ADDRESS_CHOICES = (
 
 Item.objects.all().delete()
 
+
 f = File(open(os.path.join(settings.BASE_DIR, 'media', '5.jpg'), 'rb'))
-
-
 
 for i in range(12):
     Item.objects.create(
