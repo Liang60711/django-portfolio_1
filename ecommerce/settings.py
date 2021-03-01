@@ -207,3 +207,4 @@ AWS_STORAGE_BUCKET_NAME = 'liang-demo-1'
 AWS_S3_FILE_OVERWRITE = False   # 同 static 檔名時是否覆蓋
 AWS_DEFAULT_ACL = 'public-read'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
