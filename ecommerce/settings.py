@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     # django_countries package
     'django_countries',
-
+    
+    'storages',
     'core',
 ]
 
@@ -190,3 +191,19 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # STRIPE_SECRET_KEY
 STRIPE_PUBLIC_KEY = 'pk_test_51I6sR2G3VZut7bCXovmpmvRGXhqdRs1JIqxMBBO80pskDVoARcabVdrzgOjhEI578zKxL2LKNANBZwyInJOFZoRV00K9ROTrPU'
 STRIPE_SECRET_KEY = 'sk_test_51I6sR2G3VZut7bCXgTHgrxESFaurXAaNjwf3DczpWcFk6nobPKo8lV1jDmInfrf2a9BrISpbCCwI5kL4UL8WqQUs00atdggjjj'
+
+
+
+# AWS S3 buckets config
+AWS_ACCESS_KEY_ID = 'AKIAXSUSREVNLAHLH6TC'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'liang-demo-1'
+
+
+# pip install django-storage, boto3
+# django-storage package
+# boto3 為 AWS SDK(software development kit) in python
+# 檔案系統使用外部服務的話，需要有 storage backend
+AWS_S3_FILE_OVERWRITE = False   # 同 static 檔名時是否覆蓋
+AWS_DEFAULT_ACL = 'public-read'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'

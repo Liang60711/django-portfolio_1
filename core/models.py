@@ -45,7 +45,7 @@ class Item(models.Model):
     label = models.CharField(choices=LABEL_CHOICES, max_length=1)
     description = models.TextField()
     slug = models.SlugField()
-    image = models.ImageField()     # pip install pillow
+    image = models.ImageField(blank=True, null=True)     # pip install pillow
 
     def __str__(self):
         return self.title
